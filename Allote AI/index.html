@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Allote AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+    <header>
+      <div class="logo-area">
+        <img src="assets/logo.png" alt="Allote AI Logo" class="logo">
+        <h1>Allote AI</h1>
+        <span class="developer">Geliştirici: Allote AI yapan Rəsul Bayramov</span>
+      </div>
+      <button id="settings-btn">⚙️</button>
+    </header>
+
+    <main id="chat"></main>
+
+    <!-- AI Typing Loading -->
+    <div id="aiTyping" class="ai-typing" style="display: none;">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <footer>
+      <button id="commands-btn">/</button>
+      <input type="text" id="user-input" placeholder="Bir şey yaz veya / ile komut kullan..." autocomplete="off">
+      <button id="send-btn">Gönder</button>
+    </footer>
+
+    <!-- Settings Panel -->
+    <div id="settings-panel" class="settings-panel">
+      <div class="settings-header">
+        <h2>Ayarlar</h2>
+        <button id="close-settings">X</button>
+      </div>
+      <div class="theme-settings">
+        <label for="themeSelect">Tema Seç:</label>
+        <select id="themeSelect">
+            <option value="default">🌙 Varsayılan</option>
+            <option value="chocolate">🍫 Çikolatalı Tema</option>
+            <option value="pomegranate">🍎 Narlı Tema</option>
+            <option value="seaside">🌊 Dəniz Kənarı Tema</option>
+            <option value="nightSky">🌌 Gecə Göyü Tema</option>
+            <option value="pastelSpring">🌸 Pastel Bahar Tema</option>
+            <option value="neonFuturistic">🌐 Neon Futuristik Tema</option>
+            <option value="oceanDepth">🐠 Okean Dərinliyi Tema</option>
+            <option value="minimalist">⚪ Minimalist Tema</option>
+            <option value="cactus">🌵 Kaktus / Çöl Tema</option>
+            <option value="windyAutumn">🍂 Küləkli Payız Tema</option>
+            <option value="chocolateRedBerry">🍓 Şokolad + Qırmızı Meyvə Tema</option>
+            <option value="cosmic">🚀 Kosmik Tema</option>
+            <option value="winter">❄️ Qış / Buz Tema</option>
+            <option value="tropical">🌴 Tropik Tema</option>
+            <option value="easternZen">🪷 Şərq / Zen Tema</option>
+            <option value="coffeeBook">📚 Qəhvə + Kitab Tema</option>
+            <option value="aiCode">🤖 Süni İntellekt / Kod Tema</option>
+            <option value="sunset">🌇 Günəş Batışı Tema</option>
+            <option value="candy">🍭 Şəkərli / Candy Tema</option>
+            <option value="retro80s">🕹️ Retro 80’lər Tema</option>
+        </select>
+        <button id="applyThemeBtn">Temayı Uygula</button>
+        <button id="addThemeBtn">Temayı Əlavə Et</button>
+        <button id="generateThemeBtn">Rastgele Tema /themegen</button>
+
+        <div id="themePreview" style="margin-top: 10px; font-weight: bold;">Nümunə: —</div>
+
+        <hr style="margin:10px 0;">
+
+        <label for="themeSearchInput">Əlavə Edilmiş Temaları Axtar:</label>
+        <input type="text" id="themeSearchInput" placeholder="Temanı yazın...">
+
+        <ul id="savedThemesList" style="list-style:none; padding-left:0; margin-top:5px;"></ul>
+
+        <label for="savedThemesDropdown">Əlavə Edilmiş Temalar Dropdown:</label>
+        <select id="savedThemesDropdown">
+            <option value="">— Seç —</option>
+        </select>
+      </div>
+    </div>
+
+    <script type="module" src="js/privatecommands.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/weather.js"></script>
+    <script type="module" src="js/responses.js"></script>
+    <script type="module" src="js/settings.js"></script>
+    <script type="module" src="js/response.js"></script>
+    <script type="module" src="js/language.js"></script>
+    <script type="module" src="js/theme.js"></script>
+</body>
+</html>
