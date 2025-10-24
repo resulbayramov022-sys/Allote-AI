@@ -32,6 +32,7 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  padding-bottom: 60px; /* Footer yüksekliği kadar padding */
 }
 
 /* 🔝 HEADER */
@@ -155,6 +156,10 @@ header h1 {
 
 /* 📥 FOOTER / INPUT ALANI */
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background: var(--header);
   padding: 8px 10px;
   display: flex;
@@ -162,7 +167,7 @@ footer {
   gap: 8px;
   border-top: 1px solid rgba(255,255,255,0.1);
   flex-wrap: nowrap;
-  width: 100%;
+  z-index: 1000;
 }
 
 #commands-btn {
@@ -187,7 +192,7 @@ footer {
 #user-input {
   flex: 1;
   padding: 10px 12px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0 juggling: 0.1);
   border-radius: 12px;
   background: rgba(255,255,255,0.05);
   color: var(--text);
@@ -391,6 +396,10 @@ footer {
 
 /* 📱 RESPONSIVE */
 @media (max-width: 500px) {
+  .app {
+    padding-bottom: 80px; /* Footer yüksekliği için daha fazla padding */
+  }
+
   footer {
     padding: 6px 8px;
     gap: 6px;
@@ -418,6 +427,30 @@ footer {
   .commands-panel {
     min-width: 240px;
     max-width: 90vw;
+  }
+}
+
+@media (max-width: 360px) {
+  footer {
+    padding: 4px 6px;
+    gap: 4px;
+  }
+
+  #commands-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+
+  #user-input {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+
+  #send-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
   }
 }
 
