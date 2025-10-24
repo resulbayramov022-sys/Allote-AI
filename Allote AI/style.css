@@ -156,24 +156,27 @@ header h1 {
 /* 📥 FOOTER / INPUT ALANI */
 footer {
   background: var(--header);
-  padding: 12px 20px;
+  padding: 8px 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   border-top: 1px solid rgba(255,255,255,0.1);
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 #commands-btn {
-  padding: 10px;
-  width: 40px;
-  height: 40px;
+  padding: 8px;
+  width: 36px;
+  height: 36px;
   background: var(--bot);
   color: #fff;
   border: none;
   border-radius: 8px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 #commands-btn:hover {
@@ -183,13 +186,14 @@ footer {
 
 #user-input {
   flex: 1;
-  padding: 12px 16px;
+  padding: 10px 12px;
   border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px;
+  border-radius: 12px;
   background: rgba(255,255,255,0.05);
   color: var(--text);
-  font-size: 1rem;
+  font-size: 0.95rem;
   outline: none;
+  min-width: 0;
 }
 
 #user-input:focus {
@@ -198,14 +202,15 @@ footer {
 }
 
 #send-btn {
-  padding: 12px 24px;
+  padding: 10px 20px;
   background: var(--user);
   color: #fff;
   border: none;
-  border-radius: 14px;
+  border-radius: 12px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 #send-btn:hover {
@@ -386,6 +391,28 @@ footer {
 
 /* 📱 RESPONSIVE */
 @media (max-width: 500px) {
+  footer {
+    padding: 6px 8px;
+    gap: 6px;
+  }
+
+  #commands-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  #user-input {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  #send-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
   .city-buttons { flex-wrap: wrap; }
   .city-btn { flex: 1 1 45%; }
   .commands-panel {

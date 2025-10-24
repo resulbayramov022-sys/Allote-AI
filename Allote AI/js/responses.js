@@ -6,7 +6,7 @@ const responses = {
     "selam": "Selam! Bugün nasılsın?",
     "nasılsın": "Ben iyiyim, teşekkürler! Sen nasılsın?",
     "naber": "İyi, senin naber?",
-    "adın ne": "Benim adım Zeekr AI.",
+    "adın ne": "Benim adım Allote AI.",
     "ne yapıyorsun": "Seninle sohbet ediyorum.",
     "yardım": "Tabii, sana nasıl yardımcı olabilirim?",
     "hava nasıl": "Hava durumu konusunda maalesef bilgi veremem, ama umarım güzel bir gün geçiriyorsun!",
