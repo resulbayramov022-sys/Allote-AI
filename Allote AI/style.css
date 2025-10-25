@@ -473,3 +473,31 @@ footer {
 #savedThemesPanel ul li:hover {
   background-color: #f0f0f0;
 }
+/* style.css */
+
+/* Mevcut stiller korunsun, müzik butonları için ek stil */
+.message.bot button {
+  background: #ff4d6d; /* Varsayılan pembe ton */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 0.9rem;
+  margin: 5px;
+}
+
+.message.bot button:hover {
+  background: #e63950; /* Hafif koyu ton */
+  transform: scale(1.05);
+}
+
+/* Başka Şarkı butonu için farklı renk */
+.message.bot button[onclick*='changeMusic'] {
+  background: #22c55e; /* Yeşil ton */
+}
+
+.message.bot button[onclick*='changeMusic']:hover {
+  background: #16a34a; /* Koyu yeşil ton */
+}

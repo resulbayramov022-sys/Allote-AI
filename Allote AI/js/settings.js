@@ -111,3 +111,5 @@ document.getElementById("generateThemeBtn").addEventListener("click", () => {
 
 // Səhifə açıldıqda saxlanmış temaları yüklə
 window.addEventListener("load", loadSavedThemes);
+// Özel loadSavedThemes eventi için dinleyici
+document.addEventListener("loadSavedThemes", loadSavedThemes);

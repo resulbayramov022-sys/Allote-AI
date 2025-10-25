@@ -2,6 +2,55 @@ import { applyTheme } from "./theme.js";
 
 const privateCommands = [
   {
+    command: "/granny",
+    category: "Eğlence",
+    execute: () => {
+      // Granny teması uygula
+      applyTheme("granny");
+      
+      // 35 mesajı listele
+      const grannyMessages = [
+        "👵 Büyükanne der ki: 'Çay demlenmeden hayat demlenmez!'",
+        "🧶 Granny'nin örgüleri gibi, sabırla her iş çözülür.",
+        "🍪 Granny'nin kurabiyeleri gibisi yok, değil mi?",
+        "👵 Büyükanne nasihati: 'Erken yat, erken kalk, sağlıklı ol!'",
+        "🧵 Granny iğne iplikle dünyayı bile diker!",
+        "🍲 Granny'nin çorbası içilmeden üşütülür!",
+        "👵 Granny fıkrası: 'Neden torunlarına masal anlatır? Çünkü Wi-Fi'siz eğlence onun uzmanlığı!'",
+        "🌸 Granny'nin bahçesindeki çiçekler bile ona gülümsüyor.",
+        "📖 Granny'nin eski hikâyeleri dinlemeye değer!",
+        "👵 Büyükanne der ki: 'Sevgi, en güzel mirastır.'",
+        "🍵 Granny'nin çayı gibi sıcacık bir gülümseme her şeyi çözer.",
+        "🧣 Granny'nin ördüğü atkılar kışı bile ısıtır.",
+        "👵 Granny fıkrası: 'Telefon mu? Benim zamanımda mektup yazardık!'",
+        "🥄 Granny'nin yemek tarifleri bir hazine!",
+        "👵 Büyükanne nasihati: 'Az laf, çok iş!'",
+        "🍎 Granny'nin elmalı turtası gibisi dünyada bulunmaz.",
+        "🕰️ Granny der ki: 'Zaman en kıymetli hazine, iyi kullan.'",
+        "👵 Granny'nin torunlarına bakışı, dünyadaki en güzel manzara!",
+        "🧁 Granny'nin kekleri her zaman sürpriz doludur.",
+        "👵 Granny fıkrası: 'Neden hep kazak örüyorsun? Çünkü torunlar üşümesin!'",
+        "🌿 Granny'nin bitki çayları her derde deva.",
+        "👵 Granny der ki: 'Paylaşmak, mutluluğu çoğaltır.'",
+        "📻 Granny'nin radyo dinlediği akşamlar nostalji kokar.",
+        "🍯 Granny'nin bal kavanozu gibi tatlı anılar biriktir.",
+        "👵 Büyükanne nasihati: 'Dürüstlük her kapıyı açar.'",
+        "🧺 Granny'nin çamaşır sepeti bile hikâyelerle dolu!",
+        "👵 Granny fıkrası: 'Neden hep eski şarkıları mırıldanır? Çünkü klasikler ölmez!'",
+        "🥘 Granny'nin yemekleri aile toplantılarının yıldızıdır.",
+        "👵 Büyükanne der ki: 'Bir gülümseme, bin derde deva.'",
+        "🧴 Granny'nin ev yapımı sabunları mis gibi kokar.",
+        "👵 Granny'nin torunlarına anlattığı masallar sihirlidir.",
+        "🍒 Granny'nin reçelleri yazın tadını kışa taşır.",
+        "👵 Büyükanne nasihati: 'Hata yapmaktan korkma, öğren!'",
+        "🧸 Granny'nin eski oyuncakları hâlâ torunlarını sevindirir.",
+        "👵 Granny fıkrası: 'Neden hep şeker ikram eder? Çünkü tatlılık onun işi!'"
+      ];
+      const messageList = grannyMessages.map(msg => `<li>${msg}</li>`).join("");
+      return `😊 <strong>Granny'den 35 Mesaj:</strong><br><ul style="padding-left:20px;">${messageList}</ul><br>🎨 <strong>Granny Teması Aktif Edildi!</strong>`;
+    }
+  },
+  {
     command: "/allote",
     category: "Araçlar",
     execute: () => `
@@ -21,22 +70,24 @@ const privateCommands = [
     command: "/help",
     category: "Araçlar",
     execute: () => `
-📚 <strong>Yardım Merkezi - Allote AI</strong><br><br>
-<strong>Komutlar:</strong><br>
-/allote - Bot hakkında bilgi<br>
-/help - Yardım menüsü<br>
-/temizle - Sohbeti temizle<br>
-/saat - Anlık saat bilgisi<br>
-/tarih - Günün tarihi<br>
-/rastgele - Rastgele sayı üret<br>
-/emoji - Rastgele emoji<br>
-/renk - Rastgele renk kodu<br>
-/şaka - Komik bir şaka<br>
-/bilgi - Sistem bilgileri<br>
-/temageneratör - Rastgele tema uygular<br>
-/themegen - Rastgele tema üretir ve kaydetme seçeneği sunar<br><br>
-💬 Sohbet için normal yaz, özel işlemler için "/" ile başla!<br><br>
-👨‍💻 <strong>Geliştirici:</strong> Allote AI yapan Rəsul Bayramov
+      📚 <strong>Yardım Merkezi - Allote AI</strong><br><br>
+      <strong>Komutlar:</strong><br>
+      /allote - Bot hakkında bilgi<br>
+      /help - Yardım menüsü<br>
+      /temizle - Sohbeti temizle<br>
+      /saat - Anlık saat bilgisi<br>
+      /tarih - Günün tarihi<br>
+      /rastgele - Rastgele sayı üret<br>
+      /emoji - Rastgele emoji<br>
+      /renk - Rastgele renk kodu<br>
+      /şaka - Komik bir şaka<br>
+      /bilgi - Sistem bilgileri<br>
+      /temageneratör - Rastgele tema uygular<br>
+      /themegen - Rastgele tema üretir ve kaydetme seçeneği sunar<br>
+      /granny - Büyükanne'den 35 mesaj listesi ve Granny teması uygular<br>
+      /müzik - Rastgele şarkı önerir ve YouTube'da dinleme butonu sunar<br><br>
+      💬 Sohbet için normal yaz, özel işlemler için "/" ile başla!<br><br>
+      👨‍💻 <strong>Geliştirici:</strong> Allote AI yapan Rəsul Bayramov
     `
   },
   {
